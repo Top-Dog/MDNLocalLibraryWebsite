@@ -55,6 +55,7 @@
     <Compile Include="catalog\views.py" />
     <Compile Include="catalog\__init__.py" />
     <Compile Include="manage.py" />
+    <Compile Include="MDNLocalLibraryWebsite\settings_reference.py" />
     <Compile Include="MDNLocalLibraryWebsite\__init__.py" />
     <Compile Include="MDNLocalLibraryWebsite\settings.py" />
     <Compile Include="MDNLocalLibraryWebsite\urls.py" />
