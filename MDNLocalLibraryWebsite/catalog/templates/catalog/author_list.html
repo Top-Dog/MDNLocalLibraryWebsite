@@ -1,0 +1,26 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+	<h1>Author List</h1>
+
+	{% if author_list %}
+	<!-- We have books in the library. List the authors. -->
+	<ul>
+	  {% for author in author_list %}
+	  <li>
+		<a href="{{author.get_absolute_url}}">{{author.last_name}}, {{author.first_name}} ({{author.date_of_birth}} - {% if author.date_of_death %}{{author.date_of_death}}{% endif %})</a>
+	  </li>
+	  {% endfor %}
+	</ul>
+	{% else %}
+	  <p>There are no authors in the library.</p>
+	{% endif %}    
+  
+	<hr />
+	{% if perms.catalog.can_modify_author %}
+	<ul>
+		<li><a href="{% url 'author_create' %}">Create a new author</a></li>
+	</ul>
+	{% endif %}
+ 
+{% endblock %}

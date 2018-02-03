@@ -1,0 +1,156 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>MDNLocalLibraryWebsite</Name>
+    <RootNamespace>MDNLocalLibraryWebsite</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7174f94a-1e46-445e-96f3-51d0c990971c</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>MDNLocalLibraryWebsite.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="catalog\admin.py" />
+    <Compile Include="catalog\apps.py" />
+    <Compile Include="catalog\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="catalog\migrations\__init__.py" />
+    <Compile Include="catalog\models.py" />
+    <Compile Include="catalog\tests\test_forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="catalog\tests\test_models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="catalog\tests\test_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="catalog\tests\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="catalog\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="catalog\views.py" />
+    <Compile Include="catalog\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="MDNLocalLibraryWebsite\__init__.py" />
+    <Compile Include="MDNLocalLibraryWebsite\settings.py" />
+    <Compile Include="MDNLocalLibraryWebsite\urls.py" />
+    <Compile Include="MDNLocalLibraryWebsite\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="catalog\static\catalog\css\styles.css" />
+    <Content Include="catalog\templates\catalog\book_confirm_delete.html" />
+    <Content Include="catalog\templates\catalog\author_confirm_delete.html" />
+    <Content Include="catalog\templates\catalog\author_detail.html" />
+    <Content Include="catalog\templates\catalog\book_form.html" />
+    <Content Include="catalog\templates\catalog\author_form.html" />
+    <Content Include="catalog\templates\catalog\author_list.html" />
+    <Content Include="catalog\templates\catalog\bookinstance_list_borrowed_all.html" />
+    <Content Include="catalog\templates\catalog\bookinstance_list_borrowed_user.html" />
+    <Content Include="catalog\templates\catalog\book_detail.html" />
+    <Content Include="catalog\templates\catalog\book_list.html" />
+    <Content Include="catalog\templates\catalog\book_renew_librarian.html" />
+    <Content Include="catalog\templates\catalog\index.html" />
+    <Content Include="db.sqlite3" />
+    <Content Include="MDNLocalLibraryWebsite\templates\base.html" />
+    <Content Include="MDNLocalLibraryWebsite\templates\favicon.png" />
+    <Content Include="MDNLocalLibraryWebsite\templates\favicon_star.svg" />
+    <Content Include="MDNLocalLibraryWebsite\templates\registration\logged_out.html" />
+    <Content Include="MDNLocalLibraryWebsite\templates\registration\login.html" />
+    <Content Include="MDNLocalLibraryWebsite\templates\registration\password_reset_complete.html" />
+    <Content Include="MDNLocalLibraryWebsite\templates\registration\password_reset_confirm.html" />
+    <Content Include="MDNLocalLibraryWebsite\templates\registration\password_reset_done.html" />
+    <Content Include="MDNLocalLibraryWebsite\templates\registration\password_reset_email.html" />
+    <Content Include="MDNLocalLibraryWebsite\templates\registration\password_reset_form.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="catalog\" />
+    <Folder Include="catalog\migrations\" />
+    <Folder Include="catalog\tests\" />
+    <Folder Include="catalog\static\" />
+    <Folder Include="catalog\static\catalog\" />
+    <Folder Include="catalog\static\catalog\css\" />
+    <Folder Include="catalog\templates\" />
+    <Folder Include="catalog\templates\catalog\" />
+    <Folder Include="MDNLocalLibraryWebsite\" />
+    <Folder Include="MDNLocalLibraryWebsite\templates\registration\" />
+    <Folder Include="static\" />
+    <Folder Include="static\" />
+    <Folder Include="MDNLocalLibraryWebsite\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.6</Version>
+      <Description>env (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
