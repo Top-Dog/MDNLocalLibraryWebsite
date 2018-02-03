@@ -14,7 +14,7 @@
 env/
 static/
 obj/
-settings.py
+#settings.py
 db.sqlite3
 
 # Build results

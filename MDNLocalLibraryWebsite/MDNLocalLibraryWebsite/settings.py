@@ -29,15 +29,15 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 ALLOWED_HOSTS = ["127.0.0.1"]
 
 # Settings for Deployment
-#SECURE_SSL_REDIRECT = True # Set True to only allow connections overs SSL. Otherwise, configure a load balancer or reverse-proxy server to redirect all connections to HTTPS
-#SECURE_HSTS_SECONDS = 3600 # 1 Hour, change to one year
-#SECURE_HSTS_INCLUDE_SUBDOMAINS = True # All subdomains must be servered with SSL
-#SECURE_HSTS_PRELOAD = True
-#SECURE_CONTENT_TYPE_NOSNIFF = True
-#SECURE_BROWSER_XSS_FILTER = True # Enable the browsers XSS filter
-#SESSION_COOKIE_SECURE = True
-#CSRF_COOKIE_SECURE = True
-#X_FRAME_OPTIONS = 'DENY'
+SECURE_SSL_REDIRECT = True # Set True to only allow connections overs SSL. Otherwise, configure a load balancer or reverse-proxy server to redirect all connections to HTTPS
+SECURE_HSTS_SECONDS = 10 # 1 Hour, change to one year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True # All subdomains must be servered with SSL
+SECURE_HSTS_PRELOAD = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True # Enable the browsers XSS filter
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'DENY'
 
 # Application definition
 
