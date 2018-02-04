@@ -32,6 +32,6 @@ urlpatterns = [
 
 # Serve static files in debug mode only
 from django.conf import settings
-if settings.DEBUGor True:
+if settings.DEBUG or True:
 	from django.conf.urls.static import static
 	urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
