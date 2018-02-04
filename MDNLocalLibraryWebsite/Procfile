@@ -1,1 +1,1 @@
-web: gunicorn locallibrary.wsgi --log-file -1
+web: gunicorn MDNLocalLibraryWebsite.wsgi --log-file -1
