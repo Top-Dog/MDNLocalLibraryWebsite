@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'd+#*92zsda1ciyh*s=-0784-49a5-9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "young-brushlands-11236.herokuapp.com"]
 
 # Settings for Deployment
 SECURE_SSL_REDIRECT = True # Set True to only allow connections overs SSL. Otherwise, configure a load balancer or reverse-proxy server to redirect all connections to HTTPS
